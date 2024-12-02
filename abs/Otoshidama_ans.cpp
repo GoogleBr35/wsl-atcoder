@@ -12,10 +12,10 @@ int main(void) {
     // c.at(0) * 10000 + c.at(1) * 5000 + c.at(2) * 1000 == Y
     vector<int> c(3, -1);
     bool is_found = false;
-    rep(i, N + 1) { // 10000
-        rep(j, N + 1) { // 5000
+    for(int i = 0; i <= N; ++i) { // 10000
+        for(int j = 0; j + i <= N; ++j) { // 5000
             int k = N - i - j;
-            if(i * 10000 + j * 5000 + k * 1000 == Y && i + j + k == N) {
+            if(i * 10000 + j * 5000 + k * 1000 == Y) {
                 c.at(0) = i; c.at(1) = j; c.at(2) = k;
                 is_found = true;
                 break;
