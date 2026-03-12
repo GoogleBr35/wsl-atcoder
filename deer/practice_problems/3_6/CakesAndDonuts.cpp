@@ -2,9 +2,9 @@
 using namespace std;
 
 string judge(int n) {
-    for(int i = 1; i <= 9; ++i) {
-        for(int j = 1; j <= 9; ++j) {
-            if(n == j * i) return "Yes";
+    for(int i = 0; i * 7 <= n; ++i) {
+        for(int j = 0; (i * 7 + j * 4) <= n; ++j) {
+            if(i * 7 + j * 4 == n) return "Yes";
         }
     }
     return "No";
@@ -17,6 +17,6 @@ int main(void) {
 
     // outputs
     cout << judge(n) << endl;
-
+    
     return 0;
 }
