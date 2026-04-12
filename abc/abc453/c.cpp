@@ -2,14 +2,6 @@
 using namespace std;
 using ll = long long;
 
-void dfsVisit() {
-    
-}
-
-void dfs() {
-
-}
-
 int main(void) {
     // inputs
     ll n;
