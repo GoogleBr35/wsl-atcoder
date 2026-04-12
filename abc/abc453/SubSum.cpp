@@ -19,7 +19,7 @@ int main(void) {
     vector<int> a(n);
     for(auto &x:a) cin >> x;
 
-    for(int i = 0; i < n; ++i) {
+    for(int i = 0; i < (1 << n); ++i) {
         if(judge(i, n, a, w)) {
             cout << "Yes" << endl;
             return 0;
